@@ -9,6 +9,7 @@ This repository contains a curated collection of GSC scripts and utilities desig
 
 ### 🛠️ Gameplay Mechanics
 * **zm_mechanic_custom_perks.gsc**: Integrates an advanced perk system with several custom abilities and enhanced legacy perks.
+* **zm_power_always_on.gsc**: Forces the power to stay active permanently, preventing random power outages between rounds for a smoother survival experience.
 
 ### 🧪 Perk Breakdown
 The following perks are featured in the mechanics script:
