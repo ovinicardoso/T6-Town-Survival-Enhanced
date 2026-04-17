@@ -47,35 +47,36 @@ ZombieCounter()
     level endon("end_game");
     self endon("disconnect");
     flag_wait( "initial_blackscreen_passed" );
-    //creating Zombies word
-    
-    self.zombie_text= createFontString("Objective", 1);
-    self.zombie_text setpoint ("CENTER", "CENTER", 320, 230);
-    self.zombie_text setText("Zombies");
-    
-    //creating actual counter
-    
-    self.zombie_counter = createFontString ("small", 1);
-    self.zombie_counter setpoint ("CENTER", "CENTER", 345, 230); 
+
+    self.zombie_text = createFontString("Objective", 1.5);
+    self.zombie_text.alignX  = "right";
+    self.zombie_text.alignY  = "top";
+    self.zombie_text.horzAlign = "right";
+    self.zombie_text.vertAlign = "top";
+    self.zombie_text.x = -80;
+    self.zombie_text.y = 40;
+    self.zombie_text setText("Zombies Total");
+
+    self.zombie_counter = createFontString("small", 1.5);
+    self.zombie_counter.alignX  = "right";
+    self.zombie_counter.alignY  = "top";
+    self.zombie_counter.horzAlign = "right";
+    self.zombie_counter.vertAlign = "top";
+    self.zombie_counter.x = -20;
+    self.zombie_counter.y = 40;
     self.zombie_counter.label = &"";
     self.zombie_counter.alpha = 1;
-    //main backend
 
     while(true)
-        {
-            if(level.zombie_total + get_current_zombie_count() > 50 ) 
-                {
-                    self.zombie_counter.color = (1, 0, 0);
-                    //🔴 
-                }
-            else
-                {
-                    self.zombie_counter.color = (0, 1, 0);
-                    //🟢
-                } 
+    {
+        if(level.zombie_total + get_current_zombie_count() > 50)
+            self.zombie_counter.color = (1, 0, 0);
+        else
+            self.zombie_counter.color = (0, 1, 0);
+
         self.zombie_counter setvalue(level.zombie_total + get_current_zombie_count());
         wait 0.05;
-        }
+    }
 }
 
 ZombieLeftCounter()
