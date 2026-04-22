@@ -8,26 +8,32 @@ This repository contains a curated collection of GSC scripts and utilities desig
 * **zm_hud_counters.gsc**: Implements real-time on-screen counters for current health, maximum health, total zombies remaining in the round, and active zombies currently on the map.
 
 ### 🛠️ Gameplay Mechanics
-* **zm_mechanic_custom_perks.gsc**: Integrates an advanced perk system with several custom abilities and enhanced legacy perks.
+* **zm_mechanic_custom_perks.gsc**: A comprehensive overhaul of the perk system. It repositions perk machines across the map and introduces new abilities, including persistent upgrades and extreme survival mechanics.
 * **zm_power_always_on.gsc**: Forces the power to stay active permanently, preventing random power outages between rounds for a smoother survival experience.
 
 ### 🧪 Perk Breakdown
 The following perks are featured in the mechanics script:
 * **Jugger-Nog**: Significantly increases the player's maximum health.
+* **Tombstone Soda**: Drop a tombstone upon death. Pick it up after respawning to recover your vanilla perks and weapons.
 * **Speed Cola**: Increases weapon reload speed.
 * **Quick Revive**: Speeds up ally revival and enables auto-revive in solo play.
 * **Double Tap Root Beer**: Enhances fire rate and bullet damage.
 * **Stamin-Up**: Improves movement speed and sprint duration.
-* **Mule Kick**: Grants an additional primary weapon slot.
-* **PhD Flopper**: Grants immunity to fall and explosive damage, triggering an explosion when diving to prone.
-* **Deadshot Daiquiri**: Improves accuracy and auto-aims toward the head of enemies.
-* **Electric Cherry**: Creates an electric shockwave around the player upon reloading.
-* **Burn Heart**: Renders the player immune to lava and fire damage.
-* **Dying Wish**: Prevents a down by entering a temporary "berserker" invulnerability mode.
-* **Ethereal Razor**: Boosts melee damage, allows for multi-hit attacks, and restores health upon impact.
-* **Downer's Delight**: Increases bleedout time and allows the use of the currently equipped weapon while in last stand.
-* **Widow’s Wine**: Immobilizes nearby zombies when the player is hit and upgrades standard grenades.
-* **Ammo Regen**: Passively regenerates weapon ammunition and grenades over time.
+* **Downer's Delight**: Grants weapon buffs and protection while in Last Stand. Increases bleedout time and allows the use of your primary weapon instead of a pistol.
+* **Electric Cherry**: Reloading triggers an electric shockwave that stuns nearby zombies.
+* **Burn Heart**: Total immunity to all environmental fire and lava damage.
+* **Ammo Regen**: Passively regenerates 2 bullets per cycle for all equipped weapons.
+* **Widow’s Wine**: Automatically releases a web explosion when hit, paralyzing nearby enemies. Also transforms standard grenades into web grenades.
+* **Mule Kick**: Increases your weapon carry limit, allowing you to hold up to 3 weapons simultaneously.
+* **PhD Flopper**: Immunity to explosive and fall damage. Performing a Dolphin Dive creates a nuclear explosion dealing 0.7 of the current zombies' health.
+* **Bloodthirst**: Killing zombies regenerates health and increases your Maximum Health beyond the standard limit.
+* **Guarding Strike**: Melee kills generate a shield that absorbs lethal blows (5-minute cooldown).
+* **Rampage**: Taking damage activates a fury state, drastically increasing weapon damage for 30 seconds (5-minute cooldown).
+* **Titan Jugg**: Extreme survival upgrade. Increases your Maximum Health (HP) from 250 to 1000.
+* **Dying Wish**: Prevents death upon receiving a lethal hit, granting temporary invincibility (5-minute cooldown).
+* **Thunder Wall**: Being hit has a chance to trigger a blast of wind that knocks back and launches nearby zombies.
+* **Executioner's Edge**: Transforms your knife into a one-shot kill weapon for any round.
+* **Headshot Mayhem**: Headshot kills have a chance to trigger an area-of-effect (AoE) explosion and grant extra points.
 
 ### 💰 Economy & Persistence
 * **zm_economy_bank.gsc**: A banking system allowing players to deposit, withdraw, and transfer points via chat commands.
