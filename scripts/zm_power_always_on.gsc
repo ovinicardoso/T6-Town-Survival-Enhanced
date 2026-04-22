@@ -23,7 +23,10 @@ power_always_on_init()
     // Seta a flag "power_on" do nível — isso é o que o _zm_power checa
     // para decidir se as máquinas de perk ficam ativas
     if ( !flag( "power_on" ) )
+    {
         flag_set( "power_on" );
+        level.power_on = 1;
+    }
 
     // Marca todas as zonas como energizadas
     // O zm_custom_perks usa _zm_power internamente; forçamos o estado aqui
@@ -38,6 +41,7 @@ power_always_on_init()
         if ( !flag( "power_on" ) )
         {
             flag_set( "power_on" );
+            level.power_on = 1;
             // Log de debug — pode remover se não quiser poluir o console
             // iprintln( "^3[PowerFix] ^7Flag power_on restaurada." );
         }
